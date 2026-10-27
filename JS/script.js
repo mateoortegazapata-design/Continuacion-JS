@@ -1,17 +1,12 @@
-// ==========================================
-// TALLER: DECISIONES, CICLOS Y ASIGNACIONES
-// TIENDA MUNDO GAMING
-// ==========================================
-
 function simularVentasSemanales(nombreSemana, ventaDiariaBase, metaSemana) {
     console.log(`\n=== REPORTE DE VENTAS: ${nombreSemana} ===`);
     
-    let totalVentas = 0; // Asignación inicial acumulador (=)
+    let totalVentas = 0; 
 
     // 1. Ciclo FOR: Recorre 7 días de ventas acumuladas
     for (let dia = 1; dia <= 7; dia++) {
-        let ventaDelDia = dia * ventaDiariaBase; // Simulación de venta diaria dinámica
-        totalVentas += ventaDelDia; // Acumulación con operador +=
+        let ventaDelDia = dia * ventaDiariaBase; 
+        totalVentas += ventaDelDia;
         console.log(`Día ${dia}: Venta = $${ventaDelDia.toLocaleString()} | Acumulado = $${totalVentas.toLocaleString()}`);
     }
 
@@ -34,16 +29,13 @@ function simularVentasSemanales(nombreSemana, ventaDiariaBase, metaSemana) {
     let intentosExtra = 0;
 
     while (totalVentas < metaExtra) {
-        totalVentas += 100000; // Incrementa $100.000 por cada venta de periférico extra
-        intentosExtra++;      // Incremento en uno con ++
+        totalVentas += 100000; 
+        intentosExtra++;      
     }
 
     console.log(`Ventas extra requeridas para superar bonificación ($${metaExtra.toLocaleString()}): ${intentosExtra} ventas.`);
 }
 
-// ==========================================
-// PRUEBAS DE EJECUCIÓN (2 ESCENARIOS)
-// ==========================================
 
 // CASO 1: Semana de Alta Demanda (Supera la meta de $1.000.000 COP)
 simularVentasSemanales("Semana de Lanzamiento", 50000, 1000000);
